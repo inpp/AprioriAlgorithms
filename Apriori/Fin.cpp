@@ -1,11 +1,5 @@
-#include <iostream>
-#include <fstream>
-#include <map>
-#include <list>
-#include <vector>
-#include <algorithm>
+#include "Apriori.h"
 
-using namespace std;
 
 int FileRead(vector<vector<int>> &t){
 

@@ -1,57 +1,23 @@
-#include <iostream>
-#include <fstream>
-#include <map>
-#include <list>
-#include <vector>
-#include <algorithm>
+#include "Apriori.h"
 
-using namespace std;
-
-static int min_sup = 50;
-
-//함수 선언 부분
-int FileRead(vector<vector<int>> &t);
-
-
-// Ck와 Lk 클래스 선언.
-class Ck{
-public:	
-	int support = 0;
-	map<int, int> itemset;
-private:
-	void Sup_plus(){
-		support++;
-	}
-};
-
-class Lk{
-public:
-	map<int, int> itemset;
-};
 
 
 int main(){
 
-	list<Ck> ck; // Ck 할당.
-	list<Lk> lk; // Lk 할당.
+	vector<Ck> ck; // Ck 할당.
+	vector<Lk> lk; // Lk 할당.
 
-	vector<vector<int>> t; // transaction 저장.
-	map<int, int> itemset;
+	vector<vector<int>> t; // database의 transaction 모두 저장.
 
 	int item;
 
 	if (!FileRead(t)) // input.txt 입력.
 		return 0;
 
+	//input 입력 후 C1 생성. C1은 특수한 경우이므로 따로 생성한다.
+	vector<int> c1 = GenC1(t);
 
-
-	for (int i = 0; i < (int)t.size(); i++){
-		for (int j = 0; j < (int)t[i].size(); j++)
-			cout << t[i].at(j) << " ";
-		cout << endl;
-	}
-
-
+	//Lk와 Ck를 재귀적으로 생성.
 
 
 	return 0;
