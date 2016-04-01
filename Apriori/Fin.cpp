@@ -3,6 +3,7 @@
 #include <map>
 #include <list>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -33,6 +34,10 @@ int FileRead(vector<vector<int>> &t){
 		t.push_back(transaction);
 		row++; // 행의 개수 / 다음 번에 저장할 공간을 의미
 	}
+
+	//input의 각 itemset을 정렬.
+	for (int i = 0; i < (int)t.size(); i++)
+		sort(t[i].begin(), t[i].end());
 
 	fin.close();
 
