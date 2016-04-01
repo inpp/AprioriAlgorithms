@@ -8,6 +8,10 @@ using namespace std;
 
 static int min_sup = 50;
 
+//함수 선언
+int FileRead(vector<vector<int>> &t);
+
+
 class Ck{
 public:	
 	int support = 0;
@@ -21,31 +25,18 @@ public:
 
 
 int main(){
-	ofstream fout; // 파일 출력
-	ifstream fin; // 파일 입력
+
 	list<Ck> ck; // Ck 할당.
 	list<Lk> lk; // Lk 할당.
 
-	list<map<int, int>> t; // transaction 저장.
+	vector<vector<int>> t; // transaction 저장.
+	map<int, int> itemset;
 
 	int item;
 
-	fin.open("input.txt"); // 우선 input file을 읽는다.
-	if (fin.is_open() == false){ // 오픈이 안 되는 경우 에러메시지 발생.
-		cout << "input file open error." << endl;
+	if (!FileRead(t)) // input.txt 입력.
 		return 0;
-	}
 
-
-	int a = 30;
-	char tempstring[100];
-
-	int temp = 0; // 개행마다 입력.
-	while (!fin.eof()){ // 파일 입력 후 배열에 저장.
-		fin.getline(tempstring);
-	}
-
-	fin.close;
 	//ck.push_back()
 
 

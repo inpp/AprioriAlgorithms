@@ -78,6 +78,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Apriori.cpp" />
+    <ClCompile Include="Fin.cpp" />
+    <ClCompile Include="GenerateCk.cpp" />
+    <ClCompile Include="GenerateLk.cpp" />
+    <ClCompile Include="ScanDB.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
