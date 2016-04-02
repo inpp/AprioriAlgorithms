@@ -13,21 +13,15 @@ using namespace std;
 //min_sup 값  정하기
 static int min_sup = 50;
 
-
 // Ck와 Lk 클래스 선언.
-class Ck{
-public:
-	vector<int> itemset;
-};
-
-class Lk{
-public:
-	vector<int> itemset;
-};
+typedef vector<int> itemset;
+typedef vector<itemset> Ck;
+typedef vector<itemset> Lk;
 
 //함수 선언 부분
 int FileRead(vector<vector<int>> &t);
-int GenCk(Ck c, Lk l);
-vector<int> GenC1(vector<vector<int>> t);
+Ck GenCk(Lk &l);
+Lk GenLk(Ck &c, Lk &l);
+Ck GenC1(vector<vector<int>> t);
 
 #endif
