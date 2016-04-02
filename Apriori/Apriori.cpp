@@ -5,7 +5,7 @@ int main(){
 	Ck ck; // Ck 할당.
 	Lk lk; // Lk 할당.
 
-	vector<vector<int>> t; // database의 transaction 모두 저장.
+	transaction t; // database의 transaction 모두 저장.
 
 
 	if (!FileRead(t)) // input.txt 입력.
@@ -17,13 +17,10 @@ int main(){
 
 
 	//Lk와 Ck를 재귀적으로 생성
-	GenLk(ck, lk);
-
-
-	/*for (int i = 0; i < ck.size(); i++)
-	{
-		cout << ck[i].at(0) << endl;
-	}*/
+	do{
+		lk = GenLk(ck, lk, t);
+		ck = GenCk(lk);
+	} while (lk.size() > 0);
 
 	return 0;
 }

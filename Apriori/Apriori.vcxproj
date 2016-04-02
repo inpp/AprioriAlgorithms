@@ -82,7 +82,9 @@
     <ClCompile Include="Fin.cpp" />
     <ClCompile Include="GenerateCk.cpp" />
     <ClCompile Include="GenerateLk.cpp" />
-    <ClCompile Include="ScanDB.cpp" />
+    <ClCompile Include="ScanDB.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />

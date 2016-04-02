@@ -1,7 +1,7 @@
 #include "Apriori.h"
 
 
-int FileRead(vector<vector<int>> &t){
+int FileRead(vector<vector<int> > &t){
 
 	ifstream fin; // 파일 입력
 
@@ -15,14 +15,14 @@ int FileRead(vector<vector<int>> &t){
 	char tempstring;
 
 	while (!fin.eof()){ // 파일 입력 후 배열에 저장.
-		vector<int> transaction;
+		vector<int> trans;
 		do{
 			fin >> a;
-			transaction.push_back(a); //저장
+			trans.push_back(a); //저장
 			fin.get(tempstring); // 개행문자인지 확인
 		} while (tempstring != 10 && !fin.eof());
 
-		t.push_back(transaction);
+		t.push_back(trans);
 	}
 
 	//input의 각 itemset을 정렬.
