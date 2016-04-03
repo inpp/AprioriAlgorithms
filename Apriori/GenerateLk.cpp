@@ -76,8 +76,7 @@ Lk GenLk(Ck &c, Lk &l, transaction &t){
 		cout << "더이상 Frequent한 item은 존재하지 않습니다." << endl;
 	}
 	else{
-		cout << "LK 생성" << endl;
+		cout << "LK 생성" << nextL.size() << endl;
 	}
-	CoutMaximal(l, nextL);// Maximal itemset을 구하고 결과 출력.
 	return nextL;
 }

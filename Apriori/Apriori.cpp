@@ -1,5 +1,8 @@
 #include "Apriori.h"
 
+unordered_map<string, int> Sup_Freq;
+int min_sup = 5;
+
 int main(){
 
 	Ck ck; // Ck 할당.
@@ -14,12 +17,12 @@ int main(){
 	ck = GenC1(t);
 	lk = GenLk(ck, lk, t);
 
-
 	//Lk와 Ck를 재귀적으로 생성
 	while (lk.size() > 0){
 		ck = GenCk(lk);
 		lk = GenLk(ck, lk, t);
 	}
 
+	CoutOutput(lk, t);// 결과 출력.
 	return 0;
 }

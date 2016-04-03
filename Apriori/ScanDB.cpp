@@ -28,8 +28,20 @@ int Scan(itemset &Cd, transaction &t){
 		}
 	}
 
-	if (sup >= min_sup)
+	if (sup >= min_sup){
+		string key;
+		for (int i = 0; i < Cdsize; i++){
+			ostringstream ostr;
+			ostr << Cd[i];
+			key+=ostr.str();
+			key += ",";
+		}
+		//cout << key << endl;
+		Sup_Freq.insert(unordered_map<string, int>::value_type(key, sup));
+		unordered_map<string, int>::iterator FindIter = Sup_Freq.find(key);
+		//cout << FindIter->first << endl;
 		return 1;
+	}
 	else
 		return 0;
 }

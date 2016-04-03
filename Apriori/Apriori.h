@@ -7,11 +7,16 @@
 #include <list>
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
+#include <string>
+#include <sstream>
 
 using namespace std;
 
 //min_sup 값  정하기
-static int min_sup = 20;
+extern int min_sup;
+extern unordered_map<string, int> Sup_Freq;
+
 
 // Ck와 Lk 클래스 선언.
 typedef vector<int> itemset;
@@ -25,7 +30,7 @@ Ck GenCk(Lk &l);
 Lk GenLk(Ck &c, Lk &l, transaction &t);
 Ck GenC1(vector<vector<int> > t);
 int Scan(itemset &Cd, transaction &t);
-void CoutMaximal(Lk lk1, Lk lk2);
+void CoutOutput(Lk lk, transaction t);
 
 
 #endif

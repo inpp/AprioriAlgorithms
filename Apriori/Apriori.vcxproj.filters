@@ -30,7 +30,7 @@
     <ClCompile Include="Fin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CoutMaximal.cpp">
+    <ClCompile Include="Output.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
