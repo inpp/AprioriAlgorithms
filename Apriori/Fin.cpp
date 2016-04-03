@@ -1,7 +1,7 @@
 #include "Apriori.h"
 
 
-int FileRead(vector<vector<int> > &t){
+int FileRead(){
 
 	ifstream fin; // 파일 입력
 
