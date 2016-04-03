@@ -11,7 +11,7 @@
 using namespace std;
 
 //min_sup 값  정하기
-static int min_sup = 5;
+static int min_sup = 20;
 
 // Ck와 Lk 클래스 선언.
 typedef vector<int> itemset;
@@ -24,6 +24,8 @@ int FileRead(vector<vector<int> > &t);
 Ck GenCk(Lk &l);
 Lk GenLk(Ck &c, Lk &l, transaction &t);
 Ck GenC1(vector<vector<int> > t);
-int Scan(itemset &Cd, Lk &l, transaction &t);
+int Scan(itemset &Cd, transaction &t);
+void CoutMaximal(Lk lk1, Lk lk2);
+
 
 #endif

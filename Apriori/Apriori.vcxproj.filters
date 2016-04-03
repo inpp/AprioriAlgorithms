@@ -30,6 +30,9 @@
     <ClCompile Include="Fin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CoutMaximal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />

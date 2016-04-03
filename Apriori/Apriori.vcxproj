@@ -79,6 +79,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Apriori.cpp" />
+    <ClCompile Include="CoutMaximal.cpp" />
     <ClCompile Include="Fin.cpp" />
     <ClCompile Include="GenerateCk.cpp" />
     <ClCompile Include="GenerateLk.cpp" />
