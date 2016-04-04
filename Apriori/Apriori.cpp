@@ -10,7 +10,6 @@ int main(int argc, char *argv[]){
 
 	Ck ck; // Ck 할당.
 	Lk lk; // Lk 할당.
-	cout << argv[0] << endl << argv[1] << endl << argv[2] << endl <<argv[3];
 
 	if (!FileRead(argv[2])) // input.txt 입력.
 		return 0;
@@ -19,9 +18,7 @@ int main(int argc, char *argv[]){
 	std::stringstream ss(argv[1]);
 	int temp;
 	ss >> temp;
-	cout << "temp"<<temp;
-	min_sup = t.size() *temp / 100;
-	cout << "min sup : " << min_sup;
+	min_sup = t.size() * temp / 100;
 
 	for (int i = 0; i < tsize; i++)
 		tisize.push_back(t[i].size());
@@ -37,5 +34,7 @@ int main(int argc, char *argv[]){
 	}
 
 	f.close();
+
+	cout << "output.text 파일이 성공적으로 생성되었습니다. 프로그램을 종료합니다." << endl;
 	return 0;
 }

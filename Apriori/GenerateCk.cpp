@@ -1,7 +1,6 @@
 #include "Apriori.h"
 
 Ck GenCk(Lk &l){
-	cout << "CK 积己 矫累" << endl;
 	Ck Candidate;
 	int lsize = l.size();
 	if (lsize == 0)
@@ -39,15 +38,6 @@ Ck GenCk(Lk &l){
 		}
 	}
 
-	/*cout << "Candidate 免仿 " << endl;
-	for (int i = 0; i < Candidate.size(); i++){
-		for (int j = 0; j < Candidate[i].size(); j++){
-			cout << Candidate[i].at(j) << " ";
-		}
-		cout << endl;
-	}*/
-
-	cout << "CK 积己" << endl;
 	return Candidate;
 }
 
@@ -69,6 +59,5 @@ Ck GenC1(transaction t){
 	}
 	
 
-	cout << "CK 积己" << endl;
 	return returnc1;
 }

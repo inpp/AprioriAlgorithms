@@ -9,7 +9,6 @@ void out(itemset is, vector<int> check, int n);
 
 
 void CoutOutput(Lk lk){ // lk1이 lk-1, lk2가 lk
-	cout << "Output 출력"<< endl;
 	int lisize = lk[0].size();
 	int lsize = lk.size();
 	
