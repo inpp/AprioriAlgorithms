@@ -26,10 +26,10 @@ extern unordered_map<string, int> Sup_Freq;
 extern int tsize;
 extern vector<int> tisize;
 extern transaction t;
-
+extern ofstream f;
 
 //함수 선언 부분
-int FileRead();
+int FileRead(string filename);
 Ck GenCk(Lk &l);
 Lk GenLk(Ck &c, Lk &l);
 Ck GenC1(vector<vector<int> > t);

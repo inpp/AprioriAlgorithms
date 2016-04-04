@@ -1,11 +1,11 @@
 #include "Apriori.h"
 
 
-int FileRead(){
+int FileRead(string filename){
 
 	ifstream fin; // 파일 입력
 
-	fin.open("input.txt"); // 우선 input file을 읽는다.
+	fin.open(filename); // 우선 input file을 읽는다.
 	if (fin.is_open() == false){ // 오픈이 안 되는 경우 에러메시지 발생.
 		cout << "input file open error." << endl;
 		return 0;
